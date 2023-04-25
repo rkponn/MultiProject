@@ -2,6 +2,62 @@ from random_word import RandomWords
 
 # Hangman
 lives = 6
+hangman_stages = [
+'''
+------
+|    |
+|    0
+|   \\|/
+|   / \\   
+|
+======
+''',
+'''
+------
+|    |
+|    0
+|   \\|/
+|   /   
+|
+======
+''',
+'''
+------
+|    |
+|    0
+|   \\|/
+|  
+|
+======
+''',
+'''
+------
+|    |
+|    0
+|   \\|
+|  
+|
+======
+''',
+'''
+------
+|    |
+|    0
+|
+|   
+|
+======
+''',
+'''
+------
+|    |
+|
+|
+|
+|
+======
+'''
+]
 # Choose a random word from the word_list
 chosen_word = RandomWords().get_random_word()
 # Create a list to represent the guessed word
@@ -41,8 +97,12 @@ while lives > 0 and "_" in guessed_word:
     print(" ".join(guessed_word))
     print(f"Previous guesses: {', '.join(previous_guesses)}")
     print(f"Lives remaining: {lives}\n")
+    if lives != 0:
+        print(hangman_stages[lives - 1])
 
 if lives == 0:
+    print('''D. E. A. D. ''')
+    print(hangman_stages[0])
     print(f"You lost, bozo - the word was {chosen_word}")
 else:
     print("You won, but at what cost, how many limbs did you let go! HOW MANY!")
