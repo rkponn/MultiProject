@@ -1,6 +1,25 @@
 from random_word import RandomWords
 
 # Hangman
+print("Welcome to Hangman!")
+print("You have 6 lives to guess the word.")
+print("If you guess incorrectly, you lose a life.")
+print("If you guess correctly, you get to keep your limbs.")
+print("If you lose all your lives, you die.")
+print("If you guess the word, you win.")
+print("Good luck!\n")
+
+# Logo
+print('''
+    _    _
+    | |  | |
+    | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __
+    |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \\
+    | |  | | (_| | | | | (_| | | | | | | (_| | | | |
+    |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                            __/ |   
+                            |___/
+''')
 lives = 6
 hangman_stages = [
 '''
