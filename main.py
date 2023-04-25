@@ -59,7 +59,7 @@ hangman_stages = [
 '''
 ]
 # Choose a random word from the word_list
-chosen_word = RandomWords().get_random_word()
+chosen_word = RandomWords().get_random_word().lower()
 # Create a list to represent the guessed word
 guessed_word = ["_"] * len(chosen_word)
 
@@ -68,7 +68,7 @@ previous_guesses = []
 
 while lives > 0 and "_" in guessed_word:
     # Grab the user's input
-    guessed_letter = input("Guess a letter?")
+    guessed_letter = input("Guess a letter? ").lower()
 
     # Check if the letter has already been guessed
     if guessed_letter in previous_guesses:
